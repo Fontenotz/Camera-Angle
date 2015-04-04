@@ -1,0 +1,14 @@
+sync on
+sync rate 10
+
+make object cylinder 1,10
+load image "bear.bmp",1
+texture object 1,1
+position object 1,0,-20,-120
+
+make object box 4,3,8,2
+for cameraangle=-300 to 300 step 30
+sync
+position object 1,0,0,0
+move camera cameraangle
+next cameraangle
